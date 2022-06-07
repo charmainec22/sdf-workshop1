@@ -58,7 +58,7 @@ public class ShoppingCart {
                         boolean found = false;
                         //loop through list
                         for (int j=0; j < cart.size(); j++){
-                            
+
                             //fruit -> array gotten after second split, covert both to uppercase when comparing 
                             if((fruits[i].toUpperCase()).equals((cart.get(j).toUpperCase()))){
                                 //once found get out of loop using break
@@ -97,7 +97,7 @@ public class ShoppingCart {
                             delIndex = Integer.parseInt(terms[1]) - 1;
 
                             //if cart size has the index keyed in, proceed to delete otherwise go into else loop 
-                            if (delIndex > 0 && delIndex < cart.size()){
+                            if (delIndex >= 0 && delIndex < cart.size()){
                                 System.out.printf("Deleted %s from cart \n", cart.get(delIndex));
                                 cart.remove(delIndex);
                             }
