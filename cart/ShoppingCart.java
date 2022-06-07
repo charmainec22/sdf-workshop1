@@ -47,7 +47,7 @@ public class ShoppingCart {
 
             
 
-            switch(cmd){
+            switch(cmd.toLowerCase()){
                 case "add":
                     String fruitsStr = terms[1];
                     String fruitsReplaced = fruitsStr.replace(",", " ");
@@ -102,6 +102,7 @@ public class ShoppingCart {
                                 cart.remove(delIndex);
                             }
                             else {
+                                //methodtoprintline 
                                 showNoSuchItemToDelete();
                             }
                         }
@@ -125,6 +126,7 @@ public class ShoppingCart {
         System.out.println("Thank you for shopping with us");
     }
 
+    //method to print line
     private static void showNoSuchItemToDelete(){
         System.out.println("No such item to delete");
     }
